@@ -24,7 +24,20 @@ Install the required NPM packages:
 yarn add @andreekeberg/imagedata pdf-to-png-converter jsqr
 ```
 
+#### Note
+
+This gem is built on top of the [`jsQR`](https://github.com/cozmo/jsQR) NPM package, which means you need to be running [Node.js](https://nodejs.org/en). We utilize the [`nodo`](https://github.com/mtgrosser/nodo) gem for calling out to Node.js.
+
+TL;DR: as long as you have Node.js installed and the above listed NPM packages installed you shouldn't notice that it's calling out to Node.js.
+
+
 ## Usage
+
+Given the following QR-Bill:
+
+![](https://github.com/marcoroth/swiss_qr_bill/blob/main/test/fixtures/muster-qr-zahlteile-en/Nr.%201%20englisch.jpg?raw=true)
+
+You can read out it's information using:
 
 ```ruby
 require "swiss_qr_bill"
@@ -36,7 +49,7 @@ qr_bills.first
 #  #<data SwissQRBill::QRBill
 #    header=#<data SwissQRBill::QRBill::Header qr_type="SPC", version="0200", coding_type="1">,
 #    creditor_information=#<data SwissQRBill::QRBill::CreditorInformation iban="CH6431961000004421557">,
-#    creditor= #<data SwissQRBill::QRBill::StructuredAddress type="S", name="Health insurance fit&kicking", street="Am Wasser", building_number="1", postal_code="3000", town="Bern", country="CH">,
+#    creditor=#<data SwissQRBill::QRBill::StructuredAddress type="S", name="Health insurance fit&kicking", street="Am Wasser", building_number="1", postal_code="3000", town="Bern", country="CH">,
 #    ulimate_creditor=#<data SwissQRBill::QRBill::StructuredAddress type="", name="", street="", building_number="", postal_code="", town="", country="">,
 #    debtor=#<data SwissQRBill::QRBill::StructuredAddress type="S", name="Sarah Beispiel", street="Mustergasse", building_number="1", postal_code="3600", town="Thun", country="CH">,
 #    payment_amount_information=#<data SwissQRBill::QRBill::PaymentAmountInformation amount=111.0, currency="CHF">,
