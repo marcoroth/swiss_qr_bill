@@ -2,7 +2,7 @@
 
 A Ruby Gem for reading and parsing Swiss QR-Bills from documents like PDFs and images.
 
-This gem is meant for reading and parsing Swiss QR-Bill codes out of documents, if you are looking to generate Swiss QR-Bills check out the [`qr-bills` gem](https://github.com/damoiser/qr-bills).
+This gem is meant for reading and parsing Swiss QR-Bill codes out of documents, if you are looking to generate Swiss QR-Bills check out the [`qr-bills`](https://github.com/damoiser/qr-bills) and [`prawn-swiss_qr_bill`](https://github.com/mitosch/prawn-swiss_qr_bill) gems.
 
 ## Installation
 
