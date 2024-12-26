@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "nodo"
+  spec.add_dependency "qr_code_scanner", "~> 0.1"
 end

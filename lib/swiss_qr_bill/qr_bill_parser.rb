@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
+require "qr_code_scanner"
+
 module SwissQRBill
   class QRBillParser
     def self.parse_file(path)
-      detected_codes = QRCodeParser.parse_file(path)
+      detected_codes = QRCodeScanner.scan(path)
 
       return [] if detected_codes.empty?
 
