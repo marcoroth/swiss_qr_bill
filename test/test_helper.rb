@@ -3,5 +3,4 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 
 require "swiss_qr_bill"
-
-require "minitest/autorun"
+require "maxitest/autorun"
