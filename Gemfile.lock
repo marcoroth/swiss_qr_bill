@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    swiss_qr_bill (0.1.0)
+    swiss_qr_bill (0.1.1)
       qr_code_scanner (~> 0.1)
 
 GEM
